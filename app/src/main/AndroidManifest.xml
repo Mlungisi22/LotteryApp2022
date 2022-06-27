@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LotteryApp">
         <activity
+            android:name=".Powerballinter"
+            android:exported="false" />
+        <activity
             android:name=".numbersDisplay"
             android:exported="false" />
         <activity

@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lottermainforeground"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:text="Select lottery type"
+        android:textColor="#FDFDFD"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/button"
@@ -14,49 +25,40 @@
         android:backgroundTint="#673AB7"
         android:onClick="move"
         android:text="Generate numbers"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
 
-    <RadioButton
-        android:id="@+id/lotto"
-        android:layout_width="162dp"
-        android:layout_height="48dp"
-        android:background="#673AB7"
-        android:text="Lotto"
-        android:textColor="#C5CAE9"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <RadioButton
-        android:id="@+id/Power"
-        android:layout_width="163dp"
-        android:layout_height="48dp"
-        android:background="#673AB7"
-        android:backgroundTint="#673AB7"
-        android:text="powerball"
-        android:textColor="#C5CAE9"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lotto"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.792" />
 
     <RadioGroup
         android:id="@+id/Type"
-        android:layout_width="228dp"
-        android:layout_height="183dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+
+        android:layout_centerInParent="true">
+
+        <RadioButton
+            android:id="@+id/Power"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#673AB7"
+            android:backgroundTint="#673AB7"
+            android:checked="true"
+            android:text="Powerball"
+            android:textColor="#C5CAE9"
+            app:layout_constraintVertical_bias="0.265" />
+
+        <RadioButton
+            android:id="@+id/lotto"
+            android:layout_width="161dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#673AB7"
+            android:text="Lotto"
+            android:textColor="#C5CAE9"
+            app:layout_constraintVertical_bias="0.578" />
+    </RadioGroup>
+</RelativeLayout>
